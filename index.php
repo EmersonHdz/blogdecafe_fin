@@ -1,47 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogDeCafé</title>
-    <meta name="description" content="Página web de blog de café">
+<?php 
+ require 'includes/funciones.php';
 
-    <!-- Prefetch -->
-    <link rel="prefetch" href="nosotros.html" as="document">
-
-    <!-- Preload -->
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header class="header">
-
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-            </div>
-        </div>
-
-        <div class="header__texto">
-            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
-            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
-        </div>
-    </header>
+ incluirTemplates('header');
+?>
 
     <div class="contenedor contenido-principal">
         <main class="blog">
@@ -61,7 +22,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.php" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
@@ -76,7 +37,7 @@
                 <div class="entrada__contenido">
                     <h4 class="centrar-texto">3 Deliciosas Recetas de Café</h4>
                     <p class="parrafo-entrada">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.php" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
@@ -91,7 +52,7 @@
                 <div class="entrada__contenido">
                     <h4 class="centrar-texto">Beneficios del Café</h4>
                     <p class="parrafo-entrada">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, reprehenderit consequatur perferendis officia, vitae fuga animi temporibus itaque atque reiciendis ea excepturi! Molestias aperiam fugiat deleniti laudantium atque numquam?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.php" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
         </main>
@@ -107,7 +68,7 @@
                     <p class="widget-curso__label">Cupo: 
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
+                    <a href="entrada.php" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
                 </li>
 
                 <li class="widget-curso">
@@ -118,28 +79,12 @@
                     <p class="widget-curso__label">Cupo: 
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
+                    <a href="entrada.php" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
     </div>
 
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
-
-                <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="js/modernizr.js"></script>
+    <?php incluirTemplates('footer');?>
 </body>
 </html>
